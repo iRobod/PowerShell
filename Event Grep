@@ -1,0 +1,5 @@
+## "I SEARCH FOR A DELETE EVENT (5145)"
+PS C:\> $strLog="Security"
+PS C:\> $strText="User"
+PS C:\> Get-EventLog -LogName $strLog | Where-Object {$_.message -match $strText}
+PS C:\> Get-EventLog -LogName $strLog | Where-Object {$_.message -match $strText -and $_.eventID -eq 5145}
